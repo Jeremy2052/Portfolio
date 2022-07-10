@@ -1,4 +1,4 @@
-import { createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyled = createGlobalStyle`
   :root{
@@ -26,7 +26,8 @@ const GlobalStyled = createGlobalStyle`
   }
 
   body{
-    background-color: var(--background-dark-color);
+    ${"" /* background-color: var(--background-dark-color); */}
+    background: linear-gradient(#828788, #293d42);
     color:var(--font-light-color);
   }
 
@@ -71,4 +72,4 @@ const GlobalStyled = createGlobalStyle`
   
 `;
 
-export default GlobalStyled
+export default GlobalStyled;

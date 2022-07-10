@@ -1,35 +1,42 @@
-import React from 'react'
-import styled from 'styled-components';
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 // import avatar from '../img/avatar.jpg'
-import profile from '../img/IMG_1808.jpg'
+import profile from "../img/face.jpg";
 
-function Navigation({navToggle,toggleSide}) {
+function Navigation({ navToggle, toggleSide }) {
   return (
     <NavigationStyled>
       <div className="avatar">
         <img src={profile} alt="" />
       </div>
-        <ul className="nav-items">
-          <li className="nav-item">
-            <NavLink onClick={() => toggleSide(!navToggle)} exact to='/' activeClassName='active-class'>Home</NavLink>
-          </li>
-          {/* <li className="nav-item">
+      <ul className="nav-items">
+        <li className="nav-item">
+          <NavLink onClick={() => toggleSide(!navToggle)} exact to="/" activeClassName="active-class">
+            Home
+          </NavLink>
+        </li>
+        {/* <li className="nav-item">
             <NavLink to='/about' activeClassName='active-class'>About</NavLink>
           </li> */}
-          <li className="nav-item">
-            <NavLink onClick={() => toggleSide(!navToggle)} to='/resume' activeClassName='active-class'>Resume</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink onClick={() => toggleSide(!navToggle)} to='/projects' activeClassName='active-class'>Projects</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink onClick={() => toggleSide(!navToggle)} to='/contact' activeClassName='active-class'>Contact</NavLink>
-          </li>
-        </ul>
-      
+        <li className="nav-item">
+          <NavLink onClick={() => toggleSide(!navToggle)} to="/resume" activeClassName="active-class">
+            Resume
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink onClick={() => toggleSide(!navToggle)} to="/projects" activeClassName="active-class">
+            Projects
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink onClick={() => toggleSide(!navToggle)} to="/contact" activeClassName="active-class">
+            Contact
+          </NavLink>
+        </li>
+      </ul>
     </NavigationStyled>
-  )
+  );
 }
 
 const NavigationStyled = styled.nav`
@@ -40,7 +47,7 @@ const NavigationStyled = styled.nav`
   height: 100%;
   width: 100%;
 
-  .avatar{
+  /* .avatar{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,29 +61,45 @@ const NavigationStyled = styled.nav`
       border: 3px solid var(--border-color);
       object-fit: cover;
     }
+  } */
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* padding: 10px; */
+    /* margin-top: 40px; */
+    img {
+      width: 100%;
+      /* height: 200px; */
+      /* border-radius: 50%; */
+      /* border: 3px solid var(--border-color); */
+      object-fit: cover;
+    }
   }
 
-  .nav-items{
+  .nav-items {
     width: 100%;
     text-align: center;
     margin-top: 100px;
 
-    .active-class{
+    .active-class {
       background-color: var(--primary-color);
     }
 
-    li{
+    li {
       display: block;
       margin: 10px;
-      a{
+      a {
         display: block;
         padding: 10px;
         position: relative;
-        
-        &:hover{
+
+        &:hover {
           cursor: pointer;
         }
-        &::before{
+        &::before {
           content: "";
           position: absolute;
           bottom: 0;
@@ -84,17 +107,16 @@ const NavigationStyled = styled.nav`
           width: 0;
           height: 50%;
           background-color: var(--primary-color);
-          transition: All 0.3s cubic-bezier(.47,.82,.71,.7);
-          opacity: .2;
+          transition: All 0.3s cubic-bezier(0.47, 0.82, 0.71, 0.7);
+          opacity: 0.2;
         }
       }
-      a:hover::before{
+      a:hover::before {
         width: 100%;
         height: 100%;
       }
     }
   }
-
 `;
 
-export default Navigation
+export default Navigation;

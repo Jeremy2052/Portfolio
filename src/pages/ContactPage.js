@@ -1,70 +1,44 @@
-import { Email, LocalPhone, Person } from '@material-ui/icons';
-import React from 'react'
-import styled from 'styled-components'
-import mailImg from '../img/mailArt.png'
+import { Email, LocalPhone, Person } from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+import mailImg from "../img/mailArt.png";
 
 function ContactPage() {
   return (
     <Container>
       <Contact>
-        {/* <form action="" className="form">
-          <div className="form-field">
-            <label htmlFor="name">Name</label>
-            <input type="text" id='name' />
-          </div>
-
-          <div className="form-field">
-            <label htmlFor="email">Email</label>
-            <input type="text" id='email' />
-          </div>
-
-          <div className="form-field">
-            <label htmlFor="subject">Subject</label>
-            <input type="text" id='subject' />
-          </div>
-
-          <div className="text-area">
-            <label htmlFor="">Message</label>
-            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
-          </div>
-          <button className='send'>Send Email</button>
-        </form> */}
         <img src={mailImg} alt="" />
         <h6>Have any questions?</h6>
-        <p><a href="mailto:jeremy93214@hotmail.com">Send a quick email</a></p>
+        <p>
+          <a href="mailto:jeremy93214@hotmail.com">Send a quick email</a>
+        </p>
       </Contact>
-      
+
       <ContactInfo>
         <ContactIcon>
-          <Person/>
+          <Person />
           <div className="icon-container">
-          <h1>Name</h1>
-          <h3>Jeremy Evans</h3>
+            <h1>Name</h1>
+            <h3>Jeremy Evans</h3>
           </div>
-          
         </ContactIcon>
         <ContactIcon>
-          <LocalPhone/>
+          <LocalPhone />
           <div className="icon-container">
-          <h1>Phone</h1>
-          <h3>682-208-6837</h3>
+            <h1>Phone</h1>
+            <h3>682-208-6837</h3>
           </div>
-          
         </ContactIcon>
         <ContactIcon>
-          <Email/>
+          <Email />
           <div className="icon-container">
-          <h1>Email</h1>
-          <h3>jeremy93214@hotmail.com</h3>
+            <h1>Email</h1>
+            <h3>jeremy93214@hotmail.com</h3>
           </div>
-          
         </ContactIcon>
       </ContactInfo>
-
-     
-      
     </Container>
-  )
+  );
 }
 
 const Container = styled.div`
@@ -75,13 +49,13 @@ const Container = styled.div`
   /* height: 100vh; */
   color: white;
 
-  h6{
+  h6 {
     text-align: center;
     width: 400px;
     font-weight: 40;
   }
 
-  p{
+  p {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
@@ -92,7 +66,7 @@ const Container = styled.div`
 `;
 
 const Contact = styled.div`
-  flex:2;
+  flex: 2;
   /* padding: 20px; */
   /* justify-content: center; */
   display: flex;
@@ -100,29 +74,29 @@ const Contact = styled.div`
   align-items: center;
   justify-content: center;
 
-  img{
-    width: 80%;
+  img {
+    width: 60%;
     /* height: 300px; */
   }
-  .form{
+  .form {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: center; */
-    
-    .form-field{
+
+    .form-field {
       display: flex;
       flex-direction: column;
 
-      label{
+      label {
         font-weight: 100;
         font-size: 30px;
       }
 
-      input{
+      input {
         /* width: 50%; */
         background-color: transparent;
-        border:none;
+        border: none;
         border-bottom: 1px solid gray;
         outline: none;
         margin-bottom: 40px;
@@ -133,16 +107,16 @@ const Contact = styled.div`
       }
     }
 
-    .text-area{
+    .text-area {
       display: flex;
       flex-direction: column;
 
-      label{
+      label {
         font-weight: 100;
         font-size: 30px;
       }
 
-      textarea{
+      textarea {
         margin: 10px 0;
         background: transparent;
         color: white;
@@ -152,27 +126,26 @@ const Contact = styled.div`
       }
     }
 
-    .send{
+    .send {
       /* width: 80%; */
       background-color: transparent;
       outline: none;
       border: 0.5px solid white;
-      color:white;
+      color: white;
       padding: 10px;
       font-weight: 200;
     }
 
-    .send:hover{
+    .send:hover {
       cursor: pointer;
       background-color: #eeeeee;
       color: #111111;
     }
   }
-
 `;
 
 const ContactInfo = styled.div`
-  flex:2;
+  flex: 2;
   height: 40%;
   width: 400px;
   /* border: 1px solid var(--border-color); */
@@ -181,10 +154,6 @@ const ContactInfo = styled.div`
   /* justify-content: space-between; */
   flex-direction: column;
   /* margin-left: 30px; */
-  
-  
-
-  
 `;
 
 const ContactIcon = styled.div`
@@ -198,35 +167,32 @@ const ContactIcon = styled.div`
   background-color: #1d1d1d;
   transition: 1s ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
     box-shadow: -1px 29px 46px 3px rgba(0, 0, 0, 0.9);
     -webkit-box-shadow: -1px 29px 46px 3px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: -1px 29px 46px 3px rgba(0, 0, 0, 0.9);
   }
 
-  svg{
+  svg {
     margin: 15px;
     font-size: 40px;
     color: #808080;
   }
 
-  .icon-container{
+  .icon-container {
     margin-left: 20px;
-    h3{
+    h3 {
       font-size: 16px;
       font-weight: 500;
       color: white;
-      
     }
 
-    h1{
+    h1 {
       font-size: 20px;
       font-weight: 200;
-      
     }
   }
 `;
 
-
-export default ContactPage
+export default ContactPage;
