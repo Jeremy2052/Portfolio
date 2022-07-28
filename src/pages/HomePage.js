@@ -81,8 +81,8 @@ const HomePageStyled = styled.header`
     width: 300px;
     object-fit: cover;
     position: absolute;
-    -webkit-box-shadow: 0px 0px 17px 7px #000000;
-    box-shadow: 0px 0px 17px 7px #000000;
+    -webkit-box-shadow: 0px 1px 21px 2px rgba(26, 26, 26, 0.82);
+    box-shadow: 0px 1px 21px 2px rgba(26, 26, 26, 0.82);
   }
   .shopNgo {
     top: 10%;

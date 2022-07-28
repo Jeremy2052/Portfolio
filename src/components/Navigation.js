@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 // import avatar from '../img/avatar.jpg'
-import profile from "../img/face.jpg";
+import profile from "../img/profile2.jpg";
 
 function Navigation({ navToggle, toggleSide }) {
   return (
@@ -12,7 +12,7 @@ function Navigation({ navToggle, toggleSide }) {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink onClick={() => toggleSide(!navToggle)} exact to="/" activeClassName="active-class">
+          <NavLink onClick={() => toggleSide(true)} exact to="/" activeClassName="active-class">
             Home
           </NavLink>
         </li>
@@ -47,34 +47,15 @@ const NavigationStyled = styled.nav`
   height: 100%;
   width: 100%;
 
-  /* .avatar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    margin-top: 40px;
-    img{
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 3px solid var(--border-color);
-      object-fit: cover;
-    }
-  } */
-
   .avatar {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* padding: 10px; */
-    /* margin-top: 40px; */
+
     img {
       width: 100%;
-      /* height: 200px; */
-      /* border-radius: 50%; */
-      /* border: 3px solid var(--border-color); */
+
       object-fit: cover;
     }
   }

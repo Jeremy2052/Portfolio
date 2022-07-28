@@ -8,11 +8,36 @@ import amazon from "../img/amazonclone1.PNG";
 import chatJS from "../img/chatJS.PNG";
 import socialMedia from "../img/Social-Media.png";
 import shopNgo from "../img/shopNgo.PNG";
+import hiddenpalace from "../img/hiddenpalace.PNG";
 
 function ProjectPage() {
   return (
     <Container>
       <Projects>
+        <Project>
+          <Thumbnail>
+            <Image src={hiddenpalace} />
+          </Thumbnail>
+          <Description>
+            <Title>Hidden Palace</Title>
+            <Desc>MERN application where users can explore a variety of shoes that best fits them. Products are retrieved using MongoDB and RESTful api. Users can add products and checkout using Stripe payment.</Desc>
+            <Links>
+              <LinkIcon>
+                <Web />
+                <a href="https://hidden-palace.herokuapp.com/" target="_blank" rel="noreferrer">
+                  Site Link
+                </a>
+              </LinkIcon>
+
+              <LinkIcon>
+                <GitHub />
+                <a href="https://github.com/Jeremy2052/HiddenPalace" target="_blank" rel="noreferrer">
+                  Github Link
+                </a>
+              </LinkIcon>
+            </Links>
+          </Description>
+        </Project>
         <Project>
           <Thumbnail>
             <Image src={shopNgo} />
@@ -135,7 +160,7 @@ function ProjectPage() {
             <Links>
               <LinkIcon>
                 <Web />
-                <a href="https://serene-volhard-10cc9e.netlify.app/" target="_blank" rel="noreferrer">
+                <a href="https://netflix-clone-f6b3f.web.app/" target="_blank" rel="noreferrer">
                   Site Link
                 </a>
               </LinkIcon>

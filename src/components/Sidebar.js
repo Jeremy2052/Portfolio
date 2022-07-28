@@ -19,9 +19,12 @@ const SidebarStyled = styled.div`
   -webkit-box-shadow: 17px 3px 22px -6px rgba(0, 0, 0, 0.8);
   box-shadow: 17px 3px 22px -6px rgba(0, 0, 0, 0.8);
   transition: all 0.2s ease-in-out;
-  @media screen and (max-width: 1200px) {
-    transform: translateX(-100%);
-    /* box-shadow: none; */
+
+  &.nav-toggle {
+    @media screen and (max-width: 1200px) {
+      transform: translateX(-100%);
+      /* box-shadow: none; */
+    }
   }
 `;
 
